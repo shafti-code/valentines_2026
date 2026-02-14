@@ -1,6 +1,10 @@
-PROJECT_NAME = bin
+PROJECT_NAME = valentines
+
+CC=gcc
+CFLAGS=-lncurses
+
 main: src/main.c
-	gcc src/main.c -o build/$(PROJECT_NAME)
+	$(CC) src/main.c -o build/$(PROJECT_NAME) $(CFLAGS) -g
 
 run: main
 	./build/$(PROJECT_NAME)
