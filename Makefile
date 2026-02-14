@@ -4,7 +4,7 @@ CC=gcc
 CFLAGS=-lncurses
 
 main: src/main.c
-	$(CC) src/main.c -o build/$(PROJECT_NAME) $(CFLAGS) -g
+	$(CC) -O3 src/main.c -o build/$(PROJECT_NAME) $(CFLAGS)
 
 run: main
 	./build/$(PROJECT_NAME)

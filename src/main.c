@@ -46,7 +46,7 @@ int main(int argc, char ** argv)
     // char test_chars[] = "12345";
     initscr();
     getmaxyx(stdscr,height,width);
-    const double FPS = 10.0;
+    const double FPS = 20.0;
     height--;
     width--;
     V2 point;
