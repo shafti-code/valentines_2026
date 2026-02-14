@@ -54,7 +54,7 @@ int main(int argc, char ** argv)
     while (1) {
         refresh();
         clear();
-        for (float x = -2.0 ; x < 2.0; x += 0.01){
+        for (float x = -2.0 ; x < 2.0; x += 0.00001){
             y = heart_formula(x,k);
             if ( y != NAN){
                 point = screen((V2){x,y});
