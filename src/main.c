@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
+#include <locale.h>
 
 #include <ncurses.h>
 
@@ -35,6 +36,7 @@ float heart_formula(float x,float k){
 
 int main(int argc, char ** argv)
 {
+    setlocale(LC_ALL,"");
     float k = 0.0;
     // V2 test[] ={
     //  {0,0},
@@ -58,7 +60,7 @@ int main(int argc, char ** argv)
             y = heart_formula(x,k);
             if ( y != NAN){
                 point = screen((V2){x,y});
-                mvaddch((int)point.y,(int)point.x,'@');
+                mvaddstr((int)point.y,(int)point.x,"♥");
             }
         }
         // for (int i = 0; i < 5; ++i){
